@@ -14,6 +14,7 @@ import {
 	FileExtensions,
 	getTemplateFiles,
 } from "../templates_records/templatesDB.js";
+
 export const getProjectFiles = ({
 	resolvedProjectPath,
 	dappInfo,
@@ -97,6 +98,7 @@ export const getProjectFiles = ({
 				NEXT_PUBLIC_DEFAULT_CHAIN: getDefaultRainbowkitChain(
 					dappInfo.testnet
 				),
+				PROJECT_ID: "your_project_id_here", // Add the PROJECT_ID here
 			},
 			dappInfo.useBackend
 				? path.join(process.cwd(), "frontend")
